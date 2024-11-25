@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 import styles from "./assets/styles/style";
 
@@ -8,47 +9,51 @@ class App extends Component {
     return(
       <ImageBackground
         source={ require("./assets/images/background.png") }
-        style={styles.background}
-        imageStyle={{ opacity: 0.8 }}
+        style={ styles.background }
       >
 
         <View style={ styles.container }>
 
           <View style={ styles.header }>
 
-              <Image
-                  source={ require("./assets/images/logo.png") }
-                  style={ styles.logo }
-              />    
+            <TouchableOpacity style={ styles.back }>
+              <Icon name="arrow-left" size={ 30 } color="#FFF" />
+            </TouchableOpacity>
+
+            <Image
+                source={ require("./assets/images/logo.png") }
+                style={ styles.logo }
+            />    
 
           </View>
 
           <View style={ styles.body }>
 
             <Text style={ styles.title }>Login</Text>
-            <TextInput style={ styles.input } placeholder="E-mail" />
-            <TextInput style={ styles.input } placeholder="Senha" />
+
+            <Text style={ styles.label }>E-mail</Text>
+            <TextInput style={ styles.input } />
+
+            <Text style={ styles.label }>Senha</Text>
+            <TextInput style={ styles.input } />
 
             <TouchableOpacity style={ styles.button }>
-
               <Text style={ styles.buttonText }>Entrar</Text>
-
             </TouchableOpacity>
 
-            <Text style={ styles.text }>Esqueceu a senha?</Text>
+            <TouchableOpacity>
+              <Text style={ styles.text }>Esqueceu a senha?</Text>
+            </TouchableOpacity>
 
           </View>
 
           <View style={ styles.footer }>
 
-            <Text style={ styles.footerText }>© 2024 Seven Plus e suas empresas afiliadas. Todos os direitos reservados.</Text>
+            <Text style={ styles.footerText }>
+              © 2024 Seven Plus e suas empresas afiliadas. Todos os direitos reservados.
+            </Text>
 
           </View>
-
-          <Image
-              source={ require("./assets/images/background.png") }
-              style={ styles.background }
-          />
 
         </View>
 

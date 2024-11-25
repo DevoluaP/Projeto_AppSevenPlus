@@ -3,46 +3,66 @@ import { Dimensions, StyleSheet } from "react-native";
 const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-    ScrollView: {
-        paddingBottom: 20
+    background: {
+        width: width,
+        height: "100%",
+        display: "flex",
+        alignItems: "center"
     },
 
     container: {
-        
+        flex: 1,
+        width: width,
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        justifyContent: "space-between"
     },
     
     header: {
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 20
+        alignItems: "center"
+    },
+
+    back: {
+        alignItems: "flex-start",
+        marginRight: width * 0.75,
+        marginTop: 50
     },
 
     logo: {
-        width: "40%",
         height: 150,
+        marginLeft: 25,
         resizeMode: "contain"
     },
 
     body: {
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 20
+        alignItems: "center"
     },
 
     title: {
+        width: width * 0.8,
+        color: "#FFF",
         fontSize: 28,
         fontWeight: "bold",
-        marginBottom: 10
+        marginBottom: 20
+    },
+
+    label: {
+        width: width * 0.8,
+        color: "#FFF",
+        fontSize: 20,
+        marginBottom: 5
     },
 
     input: {
         width: width * 0.8,
         height: 50,
+        color: "#FFF",
         fontSize: 16,
         marginBottom: 20,
-        borderColor: "#000",
+        borderColor: "#FFF",
         borderWidth: 2,
         borderRadius: 10,
+        padding: 10,
+        backgroundColor: "#11111E"
     },
 
     button: {
@@ -51,35 +71,28 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
-        backgroundColor: "#000",
+        backgroundColor: "#5BC2E7"
     },
 
     buttonText: {
-        color: "#fff",
+        color: "#11111E",
         fontSize: 18,
         textAlign: "center"
     },
 
     text: {
-        color: "#00f",
+        color: "#FFF",
         fontSize: 15,
         marginTop: 20
     },
 
     footer: {
-        height: "21%",
         alignItems: "center",
-        justifyContent: "flex-end",
         padding: 10
     },
 
     footerText: {
-
-    },
-
-    background: {
-        width: width,
-        opacity: 0.8
+        color: "#FFF"
     }
 });
 
