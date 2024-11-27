@@ -1,63 +1,52 @@
 import React, { Component } from "react";
-import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import { View, Image, Text, TouchableOpacity, ImageBackground } from "react-native";
 
 import styles from "./assets/styles/style";
 
 class App extends Component {
   render() {
     return(
-      <ImageBackground
-        source={ require("./assets/images/background.png") }
-        style={ styles.background }
-      >
+        <ImageBackground
+            source={ require("./assets/images/background.png") }
+            style={ styles.background }
+        >
 
-        <View style={ styles.container }>
+            <View style={ styles.container }>
 
-          <View style={ styles.header }>
+                <View style={ styles.body }>
 
-            <TouchableOpacity style={ styles.back }>
-              <Icon name="arrow-left" size={ 30 } color="#FFF" />
-            </TouchableOpacity>
+                    <Image
+                        source={ require("./assets/images/logo.png") }
+                        style={ styles.logo }
+                    />
 
-            <Image
-                source={ require("./assets/images/logo.png") }
-                style={ styles.logo }
-            />    
+                    <Text style={ styles.title }>Comece a assistir agora</Text>
 
-          </View>
+                    <Text style={ styles.text }>
+                        Prepare-se para mergulhar nos melhores filmes, séries e muito mais!
+                    </Text>
 
-          <View style={ styles.body }>
+                    <TouchableOpacity style={ styles.button }>
+                        <Text style={ styles.buttonText }>Assinar agora</Text>
+                    </TouchableOpacity>
 
-            <Text style={ styles.title }>Login</Text>
+                    <TouchableOpacity style={ styles.button }>
+                        <Text style={ styles.buttonText }>Entrar</Text>
+                    </TouchableOpacity>
 
-            <Text style={ styles.label }>E-mail</Text>
-            <TextInput style={ styles.input } />
+                </View>
 
-            <Text style={ styles.label }>Senha</Text>
-            <TextInput style={ styles.input } />
+                <View style={ styles.footer }>
 
-            <TouchableOpacity style={ styles.button }>
-              <Text style={ styles.buttonText }>Entrar</Text>
-            </TouchableOpacity>
+                    <Text style={ styles.footerText }>
+                        © 2024 Seven Plus. Todos os direitos reservados.
+                    </Text>
 
-            <TouchableOpacity>
-              <Text style={ styles.text }>Esqueceu a senha?</Text>
-            </TouchableOpacity>
+                </View>
 
-          </View>
+            </View>
 
-          <View style={ styles.footer }>
-
-            <Text style={ styles.footerText }>
-              © 2024 Seven Plus e suas empresas afiliadas. Todos os direitos reservados.
-            </Text>
-
-          </View>
-
-        </View>
-
-      </ImageBackground>
+        </ImageBackground>
     );
   }
 }
