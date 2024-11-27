@@ -8,7 +8,7 @@ class LoginScreen extends Component {
   render() {
     return(
       <ImageBackground
-        source={ require("./assets/images/background.png") }
+        source={ require("../assets/images/background.png") }
         style={ styles.background }
       >
 
@@ -16,12 +16,15 @@ class LoginScreen extends Component {
 
           <View style={ styles.header }>
 
-            <TouchableOpacity style={ styles.back }>
+            <TouchableOpacity
+              style={ styles.back }
+              onPress={ () => this.props.navigation.navigate("Home") }
+            >
               <Icon name="arrow-left" size={ 30 } color="#FFF" />
             </TouchableOpacity>
 
             <Image
-              source={ require("./assets/images/logo.png") }
+              source={ require("../assets/images/logo.png") }
               style={ styles.logo }
             />
 

@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
 
     container: {
         width: width,
-        height: height,
-        justifyContent: "space-around",
-        backgroundColor: "rgba(0, 0, 0, 0.7)"
+        height: height * 0.91,
+        justifyContent: "space-evenly",
+        backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
     
     header: {
@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     back: {
         alignItems: "flex-start",
         marginRight: width * 0.75,
-        marginTop: 20
     },
 
     logo: {
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
 
     footer: {
         alignItems: "center",
-        padding: 10
+        padding: 30
     },
 
     footerText: {

@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
 
     container: {
         width: width,
-        height: height,
+        height: height * 0.91,
         alignItems: "center",
         justifyContent: "space-around",
-        backgroundColor: "rgba(0, 0, 0, 0.7)"
+        backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
 
     body: {

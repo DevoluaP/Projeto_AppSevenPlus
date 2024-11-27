@@ -1,52 +1,34 @@
-import React, { Component } from "react";
-import { View, Image, Text, TouchableOpacity, ImageBackground } from "react-native";
+// npm install react-native-gesture-handler react-native-reanimated
+// npm install @react-navigation/native
+// npm install @react-navigation/stack
+// npm install react-native-screens react-native-safe-area-context
 
-import styles from "./assets/styles/style";
+import React, { Component } from "react";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
+import PlanScreen from "./screens/PlanScreen";
+// import RegisterScreen from "./screens/RegisterScreen";
+
+const Stack = createStackNavigator();
 
 class App extends Component {
   render() {
-    return(
-        <ImageBackground
-            source={ require("./assets/images/background.png") }
-            style={ styles.background }
-        >
+    return (
+      <NavigationContainer>
 
-            <View style={ styles.container }>
+        <Stack.Navigator initialRouteName="Home">
 
-                <View style={ styles.body }>
+          <Stack.Screen name="Home" component={ HomeScreen } />
+          <Stack.Screen name="Login" component={ LoginScreen } />
+          <Stack.Screen name="Plan" component={ PlanScreen } />
+          {/* <Stack.Screen name="Register" component={ RegisterScreen } /> */}
 
-                    <Image
-                        source={ require("./assets/images/logo.png") }
-                        style={ styles.logo }
-                    />
+        </Stack.Navigator>
 
-                    <Text style={ styles.title }>Comece a assistir agora</Text>
-
-                    <Text style={ styles.text }>
-                        Prepare-se para mergulhar nos melhores filmes, séries e muito mais!
-                    </Text>
-
-                    <TouchableOpacity style={ styles.button }>
-                        <Text style={ styles.buttonText }>Assinar agora</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={ styles.button }>
-                        <Text style={ styles.buttonText }>Entrar</Text>
-                    </TouchableOpacity>
-
-                </View>
-
-                <View style={ styles.footer }>
-
-                    <Text style={ styles.footerText }>
-                        © 2024 Seven Plus. Todos os direitos reservados.
-                    </Text>
-
-                </View>
-
-            </View>
-
-        </ImageBackground>
+      </NavigationContainer>
     );
   }
 }
