@@ -1,12 +1,30 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 import styles from "../assets/styles/style-plan";
-import { ScrollView } from "react-native-gesture-handler";
 
 class PlanScreen extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedPeriod: "Mensal",
+            selectedPlan: null
+        }
+    }
+    
+    handlePeriodChange = (period) => {
+        this.setState({ selectedPeriod: period, selectedPlan: null });
+    }
+
+    handlePlanSelect = (plan) => {
+        this.setState({ selectedPlan: plan });
+    }
+
     render() {
+        const { selectedPeriod, selectedPlan } = this.state;
+
         return(
             <ScrollView>
 
@@ -38,55 +56,128 @@ class PlanScreen extends Component {
 
                             <View style={ styles.periodContainer }>
 
-                                <TouchableOpacity style={ styles.periodButton }>
+                                <TouchableOpacity
+                                    style={[
+                                        styles.periodButton,
+                                        selectedPeriod === "Mensal" ? styles.selectedButton : styles.unselectedButton,
+                                    ]}
+                                    onPress={ () => this.handlePeriodChange("Mensal") }
+                                >
                                     <Text style={ styles.periodText }>Mensal</Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={ styles.periodButton }>
+                                <TouchableOpacity
+                                    style={[
+                                        styles.periodButton,
+                                        selectedPeriod === "Anual" ? styles.selectedButton : styles.unselectedButton,
+                                    ]}
+                                    onPress={ () => this.handlePeriodChange("Anual") }
+                                >
                                     <Text style={ styles.periodText }>Anual</Text>
                                 </TouchableOpacity>
 
                             </View>
 
-                            <TouchableOpacity style={ styles.planContainer }>
+                            {selectedPeriod === "Mensal" && (
+                                <>
+                                    {["Básico", "Padrão", "Família"].map((plan, index) => (
 
-                                <Text style={ styles.planTitle }>Básico</Text>
-                                <Text style={ styles.planPrice }>R$ 30,00</Text>
-                                <Text style={ styles.planBenefit }>• 2 dispositivos ao mesmo tempo</Text>
-                                <Text style={ styles.planBenefit }>• Resolução Full HD</Text>
+                                        <TouchableOpacity
+                                            key={ index }
+                                            style={[
+                                                styles.planContainer,
+                                                selectedPlan === plan ? styles.selectedPlan : styles.unselectedPlan,
+                                            ]}
+                                            onPress={ () => this.handlePlanSelect(plan) }
+                                        >
 
-                            </TouchableOpacity>
+                                            <Text style={ styles.planTitle }>{ plan }</Text>
+                                            
+                                            <Text style={ styles.planPrice }>
+                                                {
+                                                    plan === "Básico" ? "R$ 30,00 /mês" :
+                                                    plan === "Padrão" ? "R$ 40,00 /mês" : "R$ 60,00 /mês"
+                                                }
+                                            </Text>
 
-                            <TouchableOpacity style={ styles.planContainer }>
+                                            {[
+                                                plan === "Básico"  ? "• 2 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Básico"  ? "• Resolução Full HD"                  : null,
+                                                plan === "Padrão"  ? "• 2 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Padrão"  ? "• Resolução Full HD"                  : null,
+                                                plan === "Padrão"  ? "• 30 downloads para curtir off-line"  : null,
+                                                plan === "Família" ? "• 4 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Família" ? "• Resolução Full HD e 4K Ultra HD"    : null,
+                                                plan === "Família" ? "• Audio Dolby Atmos"                  : null,
+                                                plan === "Família" ? "• 100 downloads para curtir off-line" : null,
+                                            ].filter(Boolean).map((benefit, index) => (
+                                                <Text key={ index } style={ styles.planBenefit }>{ benefit }</Text>
+                                            ))}
 
-                                <Text style={ styles.planTitle }>Padrão</Text>
-                                <Text style={ styles.planPrice }>R$ 40,00</Text>
-                                <Text style={ styles.planBenefit }>• 2 dispositivos ao mesmo tempo</Text>
-                                <Text style={ styles.planBenefit }>• Resolução Full HD</Text>
-                                <Text style={ styles.planBenefit }>• 30 downloads para curtir off-line</Text>
+                                        </TouchableOpacity>
 
-                            </TouchableOpacity>
+                                    ))}
+                                </>
+                            )}
 
-                            <TouchableOpacity style={ styles.planContainer }>
+                            {selectedPeriod === "Anual" && (
+                                <>
+                                    {["Básico", "Padrão", "Família"].map((plan, index) => (
 
-                                <Text style={ styles.planTitle }>Família</Text>
-                                <Text style={ styles.planPrice }>R$ 60,00</Text>
-                                <Text style={ styles.planBenefit }>• 4 dispositivos ao mesmo tempo</Text>
-                                <Text style={ styles.planBenefit }>• Resolução Full HD e 4K Ultra HD</Text>
-                                <Text style={ styles.planBenefit }>• Audio Dolby Atmos</Text>
-                                <Text style={ styles.planBenefit }>• 100 downloads para curtir off-line</Text>
+                                        <TouchableOpacity
+                                            key={ index }
+                                            style={[
+                                                styles.planContainer,
+                                                selectedPlan === plan ? styles.selectedPlan : styles.unselectedPlan,
+                                            ]}
+                                            onPress={ () => this.handlePlanSelect(plan) }
+                                        >
 
-                            </TouchableOpacity>
+                                            <Text style={ styles.planTitle }>{ plan }</Text>
+                                            
+                                            <Text style={ styles.planPrice }>
+                                                {
+                                                    plan === "Básico" ? "R$ 225,00 /ano" :
+                                                    plan === "Padrão" ? "R$ 360,00 /ano" : "R$ 480,00 /ano"
+                                                }
+                                            </Text>
+                                            
+                                            {[
+                                                plan === "Básico"  ? "• 2 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Básico"  ? "• Resolução Full HD"                  : null,
+                                                plan === "Padrão"  ? "• 2 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Padrão"  ? "• Resolução Full HD"                  : null,
+                                                plan === "Padrão"  ? "• 30 downloads para curtir off-line"  : null,
+                                                plan === "Família" ? "• 4 dispositivos ao mesmo tempo"      : null,
+                                                plan === "Família" ? "• Resolução Full HD e 4K Ultra HD"    : null,
+                                                plan === "Família" ? "• Audio Dolby Atmos"                  : null,
+                                                plan === "Família" ? "• 100 downloads para curtir off-line" : null,
+                                            ].filter(Boolean).map((benefit, index) => (
+                                                <Text key={ index } style={ styles.planBenefit }>{ benefit }</Text>
+                                            ))}
+
+                                        </TouchableOpacity>
+
+                                    ))}
+                                </>
+                            )}
 
                         </View>
 
                         <View style={ styles.footer }>
 
-                            <Text style={ styles.footerText }>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, magni neque. Itaque officia possimus velit quaerat ipsam repudiandae aliquid earum consequuntur odio ipsum laborum corrupti, officiis, provident repellendus quis minima.
-                            </Text>
-
-                            <TouchableOpacity style={ styles.button }>
+                            <TouchableOpacity
+                                style={[
+                                    styles.button,
+                                    !selectedPlan && styles.buttonDisabled
+                                ]}
+                                onPress={() => {
+                                    if (selectedPlan) {
+                                        this.props.navigation.navigate("Register")
+                                    }
+                                }}
+                                disabled={ !selectedPlan }
+                            >
                                 <Text style={ styles.buttonText }>Continuar</Text>
                             </TouchableOpacity>
 

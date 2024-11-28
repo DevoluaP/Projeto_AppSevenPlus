@@ -45,10 +45,11 @@ const styles = StyleSheet.create({
     },
 
     periodContainer: {
-        width: width ,
+        width: width,
         alignItems: "center",
         justifyContent: "space-evenly",
-        flexDirection: "row"
+        flexDirection: "row",
+        marginTop: 20
     },
 
     periodButton: {
@@ -59,35 +60,72 @@ const styles = StyleSheet.create({
         borderBottomWidth: 5,
     },
 
+    selectedButton: {
+      borderColor: "#FFF",
+      backgroundColor: "rgba(255, 255, 255, 0.2)"
+    },
+
+    unselectedButton: {
+      borderColor: "#11111E"
+    },
+
     periodText: {
         color: "#FFF",
         fontSize: 16
     },
 
     planContainer: {
-
+        width: width * 0.85,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 20,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        borderRadius: 10,
+        backgroundColor: "#11111E",
     },
 
     planTitle: {
         color: "#FFF",
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 5
     },
 
     planPrice: {
         color: "#FFF",
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 10
     },
 
     planBenefit: {
+        width: "100%",
         color: "#FFF",
+        alignItems: "flex-start",
+        marginBottom: 5
+    },
+
+    selectedPlan: {
+        borderColor: "#FFF",
+        borderWidth: 5,
+        borderRadius: 10
+    },
+
+    unselectedPlan: {
+        borderWidth: 0
+    },
+
+    buttonDisabled: {
+        backgroundColor: "#AAA"
     },
 
     footer: {
         alignItems: "center",
         padding: 30
-    },
-
-    footerText: {
-        color: "#FFF",
-        marginBottom: 10
     },
 
     button: {
