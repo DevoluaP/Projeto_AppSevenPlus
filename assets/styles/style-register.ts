@@ -5,12 +5,12 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     background: {
         width: width,
-        height: height,
+        height: height
     },
 
     container: {
         width: width,
-        height: height * 0.91,
+        height: height,
         justifyContent: "space-evenly",
         backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
@@ -43,7 +43,10 @@ const styles = StyleSheet.create({
     },
 
     subtitle: {
-        
+        width: width * 0.8,
+        color: "#FFF",
+        fontSize: 18,
+        marginBottom: 20
     },
 
     label: {

@@ -3,7 +3,7 @@ import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from 
 import { ScrollView } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-import styles from "../assets/styles/style-login";
+import styles from "../assets/styles/style-register";
 
 class RegisterScreen extends Component {
     render() {
@@ -62,6 +62,10 @@ class RegisterScreen extends Component {
                             <TouchableOpacity style={ styles.button }>
                                 <Text style={ styles.buttonText }>Criar Conta</Text>
                             </TouchableOpacity>
+
+                            <Text style={ styles.footerText }>
+                                © 2024 Seven Plus. Todos os direitos reservados.
+                            </Text>
 
                         </View>
 
