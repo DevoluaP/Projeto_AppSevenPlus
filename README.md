@@ -1,52 +1,86 @@
-Instruções de Instalação
+# Seven Plus
 
-Este projeto React Native utiliza as seguintes bibliotecas externas:
+Este repositório contém o projeto `Seven Plus`, um streaming desenvolvido para fins educacionais.
 
-    react-native-gesture-handler: Para manipulação de gestos e navegação.
-    react-native-vector-icons (FontAwesome, MaterialIcons): Para ícones no app.
-    react-native-image-picker: Para selecionar imagens da galeria ou tirar fotos.
-    react-native-reanimated-carousel: Para criar carrosséis animados.
+## Configuração Inicial
 
-Passos para instalar as dependências:
+### Passos para Instalação
 
-    Instalar react-native-gesture-handler:
+1. Clone o repositório do GitHub:
 
+```
+git clone https://github.com/DevoluaP/projeto-seven-mobile.git
+cd projeto-seven-mobile
+```
+
+2. Instale as dependências:
+
+Instalar react-native-gesture-handler:
+```
 npm install react-native-gesture-handler
-
+```
 Ou com Yarn:
-
+```
 yarn add react-native-gesture-handler
+```
 
 Instalar react-native-vector-icons:
-
+```
 npm install react-native-vector-icons
-
+```
 Ou com Yarn:
-
+```
 yarn add react-native-vector-icons
+```
 
 Instalar react-native-image-picker:
-
+```
 npm install react-native-image-picker
-
+```
 Ou com Yarn:
-
+```
 yarn add react-native-image-picker
+```
 
 Instalar react-native-reanimated-carousel:
-
+```
 npm install react-native-reanimated-carousel
-
+```
 Ou com Yarn:
+```
+yarn add react-native-reanimated-carousel
+```
 
-    yarn add react-native-reanimated-carousel
+## Script Disponíveis
 
-Executar o Projeto:
+Após a instalação, você pode iniciar com os seguintes comandos:
 
-    Para Android:
+* `npm start`: Inicia o aplicativo em modo de desenvolvimento.
 
-npx react-native run-android
+* `npx react-native run-android`: Para Android
 
-Para iOS:
+* `npx react-native run-ios`: Para iOS
 
-npx react-native run-ios
+## Contribuindo
+
+Para contribuir com o `Seven Plus`, siga as seguintes etapas:
+
+1. Crie uma nova branch para suas alterações:
+
+```
+git checkout -b minha-nova-feature
+```
+
+2. Faça commit das suas alterações:
+
+```
+git commit -m "Descrição das alterações"
+```
+
+3. Envie para o repositório:
+
+```
+git push origin minha-nova-feature
+```
+
+4. Abra um Pull Request no GitHub.
