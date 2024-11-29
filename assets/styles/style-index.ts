@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
     header: {
         width: width,
-        height: height * 0.12,
+        height: height * 0.14,
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "row"
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     logo: {
         width: "25%",
         resizeMode: "contain",
-        marginBottom: -20
+        marginBottom: -50
     },
 
     navbar: {
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-evenly",
         flexDirection: "row",
+        marginBottom: -30
     },
 
     headerText: {

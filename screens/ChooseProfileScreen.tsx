@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Icon from "react-native-vector-icons/MaterialIcons";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
 import styles from "../assets/styles/style-choose-profile";
 
@@ -86,21 +86,6 @@ class ChooseProfileScreen extends Component {
                             style={ styles.profilePicture }
                         />
                         <Text style={ styles.profileName }>Perfil 5</Text>
-
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={ styles.profileContainer }
-                        onPress={ () => this.props.navigation.navigate("CreateProfile") }
-                    >
-
-                        <Icon
-                            name="add"
-                            size={ 50 }
-                            color="#FFF"
-                            backgroundColor="#5BC2E7"
-                            style={{ borderRadius: 50 }}
-                        />
 
                     </TouchableOpacity>
 

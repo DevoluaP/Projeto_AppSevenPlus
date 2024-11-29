@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import { ScrollView } from "react-native-gesture-handler";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import styles from "../assets/styles/style-new-password";
-import { ScrollView } from "react-native-gesture-handler";
 
 class NewPasswordScreen extends Component {
   render() {
@@ -23,7 +23,7 @@ class NewPasswordScreen extends Component {
                 style={ styles.back }
                 onPress={ () => this.props.navigation.navigate("RecoveryPassword") }
               >
-                <Icon name="arrow-left" size={ 30 } color="#FFF" />
+                <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
               </TouchableOpacity>
       
               <Image

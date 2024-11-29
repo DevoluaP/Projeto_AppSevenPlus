@@ -1,10 +1,7 @@
-// npm install react-native-vector-icons
-// npm install react-native-reanimated-carousel
-
 import React, { Component } from "react";
 import { Dimensions, View, Image, Text, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Icon from "react-native-vector-icons/MaterialIcons";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Carousel from "react-native-reanimated-carousel";
 
 import styles from "../assets/styles/style-index";
@@ -98,7 +95,6 @@ class IndexScreen extends Component {
                         autoPlay={ true }
                         data={ highlights }
                         scrollAnimationDuration={ 2000 }
-                        onSnapToItem={ (index) => console.log("current index:", index) }
                         renderItem={({ item }) => (
                             <View style={ styles.carouselItemPrimary }>
                                 <Image
@@ -116,7 +112,6 @@ class IndexScreen extends Component {
                         width={ width * 0.4 }
                         data={ popularOnSeven }
                         scrollAnimationDuration={ 2000 }
-                        onSnapToItem={ (index) => console.log("current index:", index) }
                         renderItem={({ item }) => (
                             <View style={ styles.carouselItemSecondary }>
                                 <Image
@@ -134,7 +129,6 @@ class IndexScreen extends Component {
                         width={ width * 0.4 }
                         data={ trending }
                         scrollAnimationDuration={ 2000 }
-                        onSnapToItem={ (index) => console.log("current index:", index) }
                         renderItem={({ item }) => (
                             <View style={ styles.carouselItemSecondary }>
                                 <Image
@@ -152,7 +146,6 @@ class IndexScreen extends Component {
                         width={ width * 0.4 }
                         data={ action }
                         scrollAnimationDuration={ 2000 }
-                        onSnapToItem={ (index) => console.log("current index:", index) }
                         renderItem={({ item }) => (
                             <View style={ styles.carouselItemSecondary }>
                                 <Image
@@ -173,28 +166,28 @@ class IndexScreen extends Component {
 
                     <TouchableOpacity style={ styles.iconContainer }>
 
-                        <Icon name="home" size={ 24 } color="#FFF" />
+                        <MaterialIcons name="home" size={ 24 } color="#FFF" />
                         <Text style={ styles.iconText }>Home</Text>
 
                     </TouchableOpacity>
 
                     <TouchableOpacity style={ styles.iconContainer }>
 
-                        <Icon name="search" size={ 24 } color="#FFF" />
+                        <MaterialIcons name="search" size={ 24 } color="#FFF" />
                         <Text style={ styles.iconText }>Buscar</Text>
 
                     </TouchableOpacity>
 
                     <TouchableOpacity style={ styles.iconContainer }>
 
-                        <Icon name="download" size={ 24 } color="#FFF" />
+                        <MaterialIcons name="download" size={ 24 } color="#FFF" />
                         <Text style={ styles.iconText }>Downloads</Text>
 
                     </TouchableOpacity>
 
                     <TouchableOpacity style={ styles.iconContainer }>
 
-                        <Icon name="menu" size={ 24 } color="#FFF" />
+                        <MaterialIcons name="menu" size={ 24 } color="#FFF" />
                         <Text style={ styles.iconText }>Menu</Text>
 
                     </TouchableOpacity>

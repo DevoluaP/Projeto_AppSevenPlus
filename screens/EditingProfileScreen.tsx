@@ -3,9 +3,9 @@ import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
-import styles from "../assets/styles/style-create-profile";
+import styles from "../assets/styles/style-editing-profile";
 
-class CreateProfileScreen extends Component {
+class EditingProfileScreen extends Component {
   state = {
     profileImage: null,
   }
@@ -37,7 +37,7 @@ class CreateProfileScreen extends Component {
             <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
           </TouchableOpacity>
 
-          <Text style={ styles.title }>Criar perfil</Text>
+          <Text style={ styles.title }>Editar perfil</Text>
 
         </View>
 
@@ -59,7 +59,7 @@ class CreateProfileScreen extends Component {
 
           <TouchableOpacity
             style={ styles.button }
-            onPress={ () => this.props.navigation.navigate("ChooseProfile") }
+            onPress={ () => this.props.navigation.navigate("EditProfile") }
           >
             <Text style={ styles.buttonText }>Pronto</Text>
           </TouchableOpacity>
@@ -71,4 +71,4 @@ class CreateProfileScreen extends Component {
   }
 }
 
-export default CreateProfileScreen;
+export default EditingProfileScreen;

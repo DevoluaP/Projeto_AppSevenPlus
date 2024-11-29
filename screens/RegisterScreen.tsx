@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Icon from "react-native-vector-icons/FontAwesome";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import styles from "../assets/styles/style-register";
 
@@ -23,7 +23,7 @@ class RegisterScreen extends Component {
                                 style={ styles.back }
                                 onPress={ () => this.props.navigation.navigate("Plan") }
                             >
-                                <Icon name="arrow-left" size={ 30 } color="#FFF" />
+                                <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
                             </TouchableOpacity>
 
                         </View>

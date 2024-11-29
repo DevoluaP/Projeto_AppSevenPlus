@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Icon from "react-native-vector-icons/FontAwesome";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import styles from "../assets/styles/style-plan";
 
@@ -41,7 +41,7 @@ class PlanScreen extends Component {
                                 style={ styles.back }
                                 onPress={ () => this.props.navigation.navigate("Home") }
                             >
-                                <Icon name="arrow-left" size={ 30 } color="#FFF" />
+                                <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
                             </TouchableOpacity>
 
                             <Text style={ styles.title }>Escolha seu Plano</Text>

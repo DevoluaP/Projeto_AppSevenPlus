@@ -5,14 +5,13 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     background: {
         width: width,
-        height: "100%"
+        height: height
     },
 
     container: {
         width: width,
-        height: "100%",
-        justifyContent: "space-evenly",
-        backgroundColor: "rgba(0, 0, 0, 0.8)"
+        height: height,
+        backgroundColor: "#11111E"
     },
     
     header: {
@@ -25,31 +24,33 @@ const styles = StyleSheet.create({
         marginRight: width * 0.75
     },
 
+    title: {
+        color: "#FFF",
+        fontSize: 28,
+        fontWeight: "bold",
+        marginVertical: 30
+    },
+
     body: {
         alignItems: "center"
     },
 
-    title: {
-        width: width * 0.8,
-        textAlign: "center",
-        color: "#FFF",
-        fontSize: 28,
-        fontWeight: "bold",
-        marginTop: 20,
-        marginBottom: 10
+    imagePicker: {
+        width: 100,
+        height: 100,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 20,
+        borderWidth: 2,
+        borderRadius: 50,
+        borderColor: "#FFF",
+        backgroundColor: "#11111E"
     },
-
-    subtitle: {
-        width: width * 0.8,
-        textAlign: "center",
-        color: "#FFF",
-        fontSize: 18,
-        marginBottom: 10
-    },
-
-    text: {
-        color: "#FFF",
-        marginBottom: 20
+    
+    profileImage: {
+      width: "100%",
+      height: "100%",
+      borderRadius: 50
     },
 
     label: {
@@ -85,15 +86,6 @@ const styles = StyleSheet.create({
         color: "#11111E",
         fontSize: 18,
         textAlign: "center"
-    },
-
-    footer: {
-        alignItems: "center",
-        paddingVertical: 30
-    },
-
-    footerText: {
-        color: "#FFF"
     }
 });
 

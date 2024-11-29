@@ -3,15 +3,10 @@ import { Dimensions, StyleSheet } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-    background: {
-        width: width,
-        height: height
-    },
-
     container: {
         width: width,
-        height: height * 0.91,
-        backgroundColor: "rgba(0, 0, 0, 0.8)"
+        height: height,
+        backgroundColor: "#11111E"
     },
     
     header: {
@@ -20,7 +15,7 @@ const styles = StyleSheet.create({
 
     back: {
         alignItems: "flex-start",
-        marginTop: 20,
+        marginTop: 50,
         marginRight: width * 0.75
     },
 

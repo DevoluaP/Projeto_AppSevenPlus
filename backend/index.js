@@ -34,7 +34,8 @@ app.use(limiter);
         });
 
         app.get("/", (req, res) => {
-            res.send("Backend do ERP Soul está funcionando!");
+            res.send("Backend do SevenPlus está funcionando!");
+            console.log("Backend funcionando")
         });
 
         app.use("/api", checkDBConnection, apiRoutes);

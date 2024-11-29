@@ -1,79 +1,193 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from "react-native";
-import { launchImageLibrary } from "react-native-image-picker";
-import Icon from "react-native-vector-icons/FontAwesome";
+import { View, Image, Text, TouchableOpacity } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
 import styles from "../assets/styles/style-edit-profile";
 
 class EditProfileScreen extends Component {
-  state = {
-    profileImage: null,
-  }
-    
-  chooseImage = () => {
-    const options = {
-      mediaType: "photo",
-      includeBase64: true,
-    }
-    
-    launchImageLibrary(options, (response) => {
-      if (!response.didCancel && !response.errorCode) {
-        const { uri } = response.assets[0];
-        this.setState({ profileImage: uri });
-      }
-    });
-  }
-
   render() {
     return(
-      <ImageBackground
-        source={ require("../assets/images/background.png") }
-        style={ styles.background }
-      >
+        <ScrollView>
 
-        <View style={ styles.container }>
+            <View style={ styles.container }>
 
-          <View style={ styles.header }>
+                <View style={ styles.header }>
 
-            <TouchableOpacity
-              style={ styles.back } 
-              onPress={ () => this.props.navigation.goBack() }
-            >
-              <Icon name="arrow-left" size={ 30 } color="#FFF" />
-            </TouchableOpacity>
+                <TouchableOpacity
+                    style={ styles.back } 
+                    onPress={ () => this.props.navigation.navigate("ChooseProfile") }
+                >
+                    <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
+                </TouchableOpacity>
 
-            <Text style={ styles.title }>Editar perfil</Text>
+                    <Text style={ styles.title }>Editar perfis</Text>
 
-          </View>
+                </View>
 
-          <View style={ styles.body }>
+                <View style={ styles.body }>
 
-            <TouchableOpacity style={ styles.imagePicker } onPress={ this.chooseImage }>
-              {this.state.profileImage ? (
-                <Image
-                    source={{ uri: this.state.profileImage }}
-                    style={ styles.profileImage }
-                />
-              ) : (
-                <Icon name="camera" size={ 50 } color="#FFF" />
-              )}
-            </TouchableOpacity>
+                    <View style={ styles.profileContainer }>
 
-            <Text style={ styles.label }>Nome do perfil</Text>
-            <TextInput style={ styles.input } />
+                        <View>
+                            <Image
+                                source={ require("../assets/images/perfil1.png") }
+                                style={ styles.profilePicture }
+                            />
+                        </View>
+                        <Text style={ styles.profileName }>Perfil 1</Text>
 
-            <TouchableOpacity
-              style={ styles.button }
-              onPress={ () => this.props.navigation.navigate("ChooseProfile") }
-            >
-              <Text style={ styles.buttonText }>Pronto</Text>
-            </TouchableOpacity>
+                        <View style={ styles.iconsContainer }>
 
-          </View>
+                            <TouchableOpacity
+                                onPress={ () => this.props.navigation.navigate("EditingProfile") }
+                            >
+                                <MaterialIcons name="edit" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
 
-        </View>
+                            <TouchableOpacity
+                                onPress={ () => {/* Lógica para excluir o perfil */} }
+                            >
+                                <MaterialIcons name="delete" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
 
-      </ImageBackground>
+                        </View>
+
+                    </View>
+
+                    <View style={ styles.profileContainer }>
+
+                        <View>
+                            <Image
+                                source={ require("../assets/images/perfil2.png") }
+                                style={ styles.profilePicture }
+                            />
+                        </View>
+                        <Text style={ styles.profileName }>Perfil 2</Text>
+
+                        <View style={ styles.iconsContainer }>
+
+                            <TouchableOpacity
+                                onPress={ () => this.props.navigation.navigate("EditingProfile") }
+                            >
+                                <MaterialIcons name="edit" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                onPress={ () => {/* Lógica para excluir o perfil */} }
+                            >
+                                <MaterialIcons name="delete" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    <View style={ styles.profileContainer }>
+
+                        <View>
+                            <Image
+                                source={ require("../assets/images/perfil3.png") }
+                                style={ styles.profilePicture }
+                            />
+                        </View>
+                        <Text style={ styles.profileName }>Perfil 3</Text>
+
+                        <View style={ styles.iconsContainer }>
+
+                            <TouchableOpacity
+                                onPress={ () => this.props.navigation.navigate("EditingProfile") }
+                            >
+                                <MaterialIcons name="edit" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                onPress={ () => {/* Lógica para excluir o perfil */} }
+                            >
+                                <MaterialIcons name="delete" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    <View style={ styles.profileContainer }>
+
+                        <View>
+                            <Image
+                                source={ require("../assets/images/perfil4.png") }
+                                style={ styles.profilePicture }
+                            />
+                        </View>
+                        <Text style={ styles.profileName }>Perfil 4</Text>
+
+                        <View style={ styles.iconsContainer }>
+
+                            <TouchableOpacity
+                                onPress={ () => this.props.navigation.navigate("EditingProfile") }
+                            >
+                                <MaterialIcons name="edit" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                onPress={ () => {/* Lógica para excluir o perfil */} }
+                            >
+                                <MaterialIcons name="delete" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    <View style={ styles.profileContainer }>
+
+                        <View>
+                            <Image
+                                source={ require("../assets/images/perfil5.png") }
+                                style={ styles.profilePicture }
+                            />
+                        </View>
+                        <Text style={ styles.profileName }>Perfil 5</Text>
+
+                        <View style={ styles.iconsContainer }>
+
+                            <TouchableOpacity
+                                onPress={ () => this.props.navigation.navigate("EditingProfile") }
+                            >
+                                <MaterialIcons name="edit" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                onPress={ () => {/* Lógica para excluir o perfil */} }
+                            >
+                                <MaterialIcons name="delete" size={ 24 } color="#FFF" style={ styles.icon } />
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+
+                    <TouchableOpacity
+                        style={ styles.profileContainer }
+                        onPress={ () => this.props.navigation.navigate("CreateProfile") }
+                    >
+
+                        <MaterialIcons
+                            name="add"
+                            size={ 50 }
+                            color="#FFF"
+                            backgroundColor="#5BC2E7"
+                            style={{ borderRadius: 50 }}
+                        />
+
+                    </TouchableOpacity>
+
+                </View>
+
+            </View>
+
+        </ScrollView>
     );
   }
 }
