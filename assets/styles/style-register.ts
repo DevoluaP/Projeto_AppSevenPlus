@@ -5,12 +5,12 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     background: {
         width: width,
-        height: height
+        height: "100%"
     },
 
     container: {
         width: width,
-        height: height,
+        height: "100%",
         justifyContent: "space-evenly",
         backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
@@ -24,28 +24,30 @@ const styles = StyleSheet.create({
         marginRight: width * 0.75,
     },
 
-    logo: {
-        height: height * 0.2,
-        marginLeft: 25,
-        resizeMode: "contain"
-    },
-
     body: {
         alignItems: "center"
     },
 
     title: {
         width: width * 0.8,
+        textAlign: "center",
         color: "#FFF",
         fontSize: 28,
         fontWeight: "bold",
-        marginBottom: 20
+        marginTop: 20,
+        marginBottom: 10
     },
 
     subtitle: {
         width: width * 0.8,
+        textAlign: "center",
         color: "#FFF",
         fontSize: 18,
+        marginBottom: 10
+    },
+
+    text: {
+        color: "#FFF",
         marginBottom: 20
     },
 
@@ -84,15 +86,9 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
 
-    text: {
-        color: "#FFF",
-        fontSize: 15,
-        marginTop: 20
-    },
-
     footer: {
         alignItems: "center",
-        padding: 30
+        padding: 20
     },
 
     footerText: {

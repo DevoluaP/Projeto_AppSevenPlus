@@ -162,10 +162,6 @@ class PlanScreen extends Component {
                                 </>
                             )}
 
-                        </View>
-
-                        <View style={ styles.footer }>
-
                             <TouchableOpacity
                                 style={[
                                     styles.button,
@@ -180,6 +176,14 @@ class PlanScreen extends Component {
                             >
                                 <Text style={ styles.buttonText }>Continuar</Text>
                             </TouchableOpacity>
+
+                        </View>
+
+                        <View style={ styles.footer }>    
+
+                            <Text style={ styles.footerText }>
+                                © 2024 Seven Plus. Todos os direitos reservados.
+                            </Text>
 
                         </View>
 

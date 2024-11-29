@@ -5,12 +5,12 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     background: {
         width: width,
-        height: height
+        height: "100%"
     },
 
     container: {
         width: width,
-        height: height,
+        height: "100%",
         justifyContent: "space-evenly",
         backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
@@ -29,15 +29,15 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 28,
         fontWeight: "bold",
-        marginBottom: 20
+        marginTop: 20,
+        marginBottom: 10
     },
 
     subtitle: {
         color: "#FFF",
         textAlign: "center",
         fontSize: 16,
-        paddingLeft: 25,
-        paddingRight: 25
+        paddingHorizontal: 25
     },
 
     body: {
@@ -80,10 +80,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 20,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
         borderRadius: 10,
         backgroundColor: "#11111E",
     },
@@ -123,17 +121,13 @@ const styles = StyleSheet.create({
         backgroundColor: "#AAA"
     },
 
-    footer: {
-        alignItems: "center",
-        padding: 30
-    },
-
     button: {
         width: width * 0.85,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
+        marginTop: 20,
         backgroundColor: "#5BC2E7"
     },
 
@@ -141,6 +135,15 @@ const styles = StyleSheet.create({
         color: "#11111E",
         fontSize: 18,
         textAlign: "center"
+    },
+
+    footer: {
+        alignItems: "center",
+        padding: 20
+    },
+
+    footerText: {
+        color: "#FFF"
     }
 });
 

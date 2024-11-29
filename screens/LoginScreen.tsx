@@ -40,11 +40,16 @@ class LoginScreen extends Component {
             <Text style={ styles.label }>Senha</Text>
             <TextInput style={ styles.input } />
 
-            <TouchableOpacity style={ styles.button }>
+            <TouchableOpacity
+              style={ styles.button }
+              onPress={ () => this.props.navigation.navigate("ChooseProfile") }
+            >
               <Text style={ styles.buttonText }>Entrar</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={ () => this.props.navigation.navigate("RecoveryPassword") }
+            >
               <Text style={ styles.text }>Esqueceu a senha?</Text>
             </TouchableOpacity>
 

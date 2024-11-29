@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 
     footer: {
         alignItems: "center",
-        padding: 30
+        padding: 20
     },
 
     footerText: {

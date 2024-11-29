@@ -21,24 +21,22 @@ class RegisterScreen extends Component {
 
                             <TouchableOpacity
                                 style={ styles.back }
-                                onPress={ () => this.props.navigation.navigate("Home") }
+                                onPress={ () => this.props.navigation.navigate("Plan") }
                             >
                                 <Icon name="arrow-left" size={ 30 } color="#FFF" />
                             </TouchableOpacity>
-
-                            <Image
-                                source={ require("../assets/images/logo.png") }
-                                style={ styles.logo }
-                            />
 
                         </View>
 
                         <View style={ styles.body }>
 
-                            <Text style={ styles.title }>Cadastre-se</Text>
+                            <Text style={ styles.title }>Crie sua conta</Text>
+                            
                             <Text style={ styles.subtitle }>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, magni neque.
+                                Você usará isso para assistir em seus dispositivos favoritos.
                             </Text>
+
+                            <Text style={ styles.text }>* Indica um campo obrigatório</Text>
 
                             <Text style={ styles.label }>E-mail *</Text>
                             <TextInput style={ styles.input } />
@@ -55,13 +53,16 @@ class RegisterScreen extends Component {
                             <Text style={ styles.label }>Sobrenome *</Text>
                             <TextInput style={ styles.input } />
 
+                            <TouchableOpacity
+                                style={ styles.button }
+                                onPress={ () => this.props.navigation.navigate("CreateProfile") }
+                            >
+                                <Text style={ styles.buttonText }>Criar Conta</Text>
+                            </TouchableOpacity>
+
                         </View>
 
                         <View style={ styles.footer }>
-
-                            <TouchableOpacity style={ styles.button }>
-                                <Text style={ styles.buttonText }>Criar Conta</Text>
-                            </TouchableOpacity>
 
                             <Text style={ styles.footerText }>
                                 © 2024 Seven Plus. Todos os direitos reservados.
