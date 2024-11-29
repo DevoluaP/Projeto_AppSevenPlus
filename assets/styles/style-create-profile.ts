@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
     back: {
         alignItems: "flex-start",
-        marginTop: 50,
+        marginTop: 30,
         marginRight: width * 0.75
     },
 

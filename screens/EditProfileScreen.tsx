@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Image, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native-gesture-handler";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -9,6 +10,8 @@ import styles from "../assets/styles/style-edit-profile";
 class EditProfileScreen extends Component {
   render() {
     return(
+        <SafeAreaView>
+
         <ScrollView>
 
             <View style={ styles.container }>
@@ -188,6 +191,8 @@ class EditProfileScreen extends Component {
             </View>
 
         </ScrollView>
+
+        </SafeAreaView>
     );
   }
 }

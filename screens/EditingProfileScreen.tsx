@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
+import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import styles from "../assets/styles/style-editing-profile";
@@ -26,6 +27,8 @@ class EditingProfileScreen extends Component {
 
   render() {
     return(
+      <SafeAreaView>
+
       <View style={ styles.container }>
 
         <View style={ styles.header }>
@@ -67,6 +70,8 @@ class EditingProfileScreen extends Component {
         </View>
 
       </View>
+
+      </SafeAreaView>
     );
   }
 }

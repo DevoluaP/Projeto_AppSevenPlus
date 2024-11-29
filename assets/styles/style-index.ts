@@ -22,15 +22,14 @@ const styles = StyleSheet.create({
     logo: {
         width: "25%",
         resizeMode: "contain",
-        marginBottom: -50
+        marginBottom: -20
     },
 
     navbar: {
         width: "75%",
         alignItems: "center",
         justifyContent: "space-evenly",
-        flexDirection: "row",
-        marginBottom: -30
+        flexDirection: "row"
     },
 
     headerText: {

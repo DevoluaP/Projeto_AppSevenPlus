@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
 
     back: {
         alignItems: "flex-start",
-        marginTop: 50,
+        marginTop: 30,
         marginRight: width * 0.75
     },
 
     title: {
         color: "#FFF",
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: "bold",
         marginTop: 10,
         marginBottom: 30

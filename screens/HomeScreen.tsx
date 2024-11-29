@@ -1,58 +1,63 @@
 import React, { Component } from "react";
 import { View, Image, Text, TouchableOpacity, ImageBackground } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import styles from "../assets/styles/style-home";
 
 class HomeScreen extends Component {
   render() {
     return(
-        <ImageBackground
-            source={ require("../assets/images/background.png") }
-            style={ styles.background }
-        >
+        <SafeAreaView>
 
-            <View style={ styles.container }>
+            <ImageBackground
+                source={ require("../assets/images/background.png") }
+                style={ styles.background }
+            >
 
-                <View style={ styles.body }>
+                <View style={ styles.container }>
 
-                    <Image
-                        source={ require("../assets/images/logo.png") }
-                        style={ styles.logo }
-                    />
+                    <View style={ styles.body }>
 
-                    <Text style={ styles.title }>Comece a assistir agora</Text>
+                        <Image
+                            source={ require("../assets/images/logo.png") }
+                            style={ styles.logo }
+                        />
 
-                    <Text style={ styles.text }>
-                        Prepare-se para mergulhar nos melhores filmes, séries e muito mais!
-                    </Text>
+                        <Text style={ styles.title }>Comece a assistir agora</Text>
 
-                    <TouchableOpacity
-                        style={ styles.button }
-                        onPress={ () => this.props.navigation.navigate("Plan") }
-                    >
-                        <Text style={ styles.buttonText }>Assinar agora</Text>
-                    </TouchableOpacity>
+                        <Text style={ styles.text }>
+                            Prepare-se para mergulhar nos melhores filmes, séries e muito mais!
+                        </Text>
 
-                    <TouchableOpacity
-                        style={ styles.button }
-                        onPress={ () => this.props.navigation.navigate("Login") }
-                    >
-                        <Text style={ styles.buttonText }>Entrar</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            style={ styles.button }
+                            onPress={ () => this.props.navigation.navigate("Plan") }
+                        >
+                            <Text style={ styles.buttonText }>Assinar agora</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            style={ styles.button }
+                            onPress={ () => this.props.navigation.navigate("Login") }
+                        >
+                            <Text style={ styles.buttonText }>Entrar</Text>
+                        </TouchableOpacity>
+
+                    </View>
+
+                    <View style={ styles.footer }>
+
+                        <Text style={ styles.footerText }>
+                            © 2024 Seven Plus. Todos os direitos reservados.
+                        </Text>
+
+                    </View>
 
                 </View>
 
-                <View style={ styles.footer }>
-
-                    <Text style={ styles.footerText }>
-                        © 2024 Seven Plus. Todos os direitos reservados.
-                    </Text>
-
-                </View>
-
-            </View>
-
-        </ImageBackground>
+            </ImageBackground>
+            
+        </SafeAreaView>
     );
   }
 }

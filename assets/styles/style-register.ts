@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
     back: {
         alignItems: "flex-start",
-        marginTop: 50,
+        marginTop: 30,
         marginRight: width * 0.75
     },
 
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         color: "#FFF",
         fontSize: 28,
         fontWeight: "bold",
-        marginTop: 20,
+        marginTop: 10,
         marginBottom: 10
     },
 
