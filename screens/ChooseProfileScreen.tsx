@@ -28,7 +28,7 @@ class ChooseProfileScreen extends Component {
         
                         <TouchableOpacity
                             style={ styles.profileContainer }
-                            onPress={ () => this.props.navigation.navigate("Index") }
+                            onPress={ () => this.props.navigation.navigate("Home") }
                         >
                         
                             <Image
@@ -41,7 +41,7 @@ class ChooseProfileScreen extends Component {
         
                         <TouchableOpacity
                             style={ styles.profileContainer }
-                            onPress={ () => this.props.navigation.navigate("Index") }
+                            onPress={ () => this.props.navigation.navigate("Home") }
                         >
                         
                             <Image
@@ -54,7 +54,7 @@ class ChooseProfileScreen extends Component {
         
                         <TouchableOpacity
                             style={ styles.profileContainer }
-                            onPress={ () => this.props.navigation.navigate("Index") }
+                            onPress={ () => this.props.navigation.navigate("Home") }
                         >
                         
                             <Image
@@ -67,7 +67,7 @@ class ChooseProfileScreen extends Component {
         
                         <TouchableOpacity
                             style={ styles.profileContainer }
-                            onPress={ () => this.props.navigation.navigate("Index") }
+                            onPress={ () => this.props.navigation.navigate("Home") }
                         >
                         
                             <Image
@@ -80,7 +80,7 @@ class ChooseProfileScreen extends Component {
         
                         <TouchableOpacity
                             style={ styles.profileContainer }
-                            onPress={ () => this.props.navigation.navigate("Index") }
+                            onPress={ () => this.props.navigation.navigate("Home") }
                         >
                         
                             <Image

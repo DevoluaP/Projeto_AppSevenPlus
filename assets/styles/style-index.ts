@@ -3,119 +3,70 @@ import { Dimensions, StyleSheet } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
+    background: {
+        width: width,
+        height: height
+    },
+
     container: {
         width: width,
-        height: "100%",
+        height: height,
         alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#11111E"
-    },
-
-    header: {
-        width: width,
-        height: height * 0.14,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "row"
-    },
-
-    logo: {
-        width: "25%",
-        resizeMode: "contain",
-        marginBottom: -20
-    },
-
-    navbar: {
-        width: "75%",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-        flexDirection: "row"
-    },
-
-    headerText: {
-        color: "#FFF",
-        fontSize: 16
+        justifyContent: "space-around",
+        backgroundColor: "rgba(0, 0, 0, 0.8)"
     },
 
     body: {
-        width: width,
-        height: "100%",
-        backgroundColor: "#000"
+        alignItems: "center"
     },
-
-    carouselPrimary: {
-        width: width,
-        height: height / 4.2,
-        marginBottom: 10
-    },
-
-    carouselItemPrimary: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-
-    carouselImagePrimary: {
-        width: "100%",
-        height: "100%",
-        resizeMode: "contain",
-        borderRadius: 50
+    
+    logo: {
+        height: height * 0.2,
+        marginLeft: 25,
+        resizeMode: "contain"
     },
 
     title: {
+        width: width * 0.8,
         color: "#FFF",
-        fontSize: 18,
+        textAlign: "center",
+        fontSize: 28,
         fontWeight: "bold",
-        marginTop: 20,
-        marginLeft: 15
+        marginBottom: 20
     },
 
-    carouselSecondary: {
-        width: width,
-        height: height / 8,
+    text: {
+        textAlign: "center",
+        color: "#FFF",
+        fontSize: 20,
+        padding: 20,
+        marginBottom: 40
     },
 
-    carouselItemSecondary: {
-        flex: 1,
+    button: {
+        width: width * 0.8,
+        height: 50,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        marginBottom: 20,
+        borderRadius: 10,
+        backgroundColor: "#5BC2E7"
     },
 
-    carouselImageSecondary: {
-        width: "90%",
-        height: "100%",
-        resizeMode: "contain",
-        borderRadius: 20
+    buttonText: {
+        color: "#11111E",
+        fontSize: 18,
+        textAlign: "center"
+    },
+
+    footer: {
+        alignItems: "center",
+        padding: 10
     },
 
     footerText: {
         color: "#FFF"
-    },
-
-    footer: {
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "space-around",
-        flexDirection: "row",
-        paddingVertical: 10,
-        backgroundColor: "#11111E"
-    },
-    
-    footerMenu: {
-        width: "100%",
-        justifyContent: "space-around",
-        flexDirection: "row"
-    },
-    
-    iconContainer: {
-        alignItems: "center"
-    },
-    
-    iconText: {
-        color: "#FFF",
-        fontSize: 12,
-        marginTop: 4
-    } 
+    }
 });
 
 export default styles;

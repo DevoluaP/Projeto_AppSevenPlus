@@ -6,20 +6,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Carousel from "react-native-reanimated-carousel";
 
-import styles from "../assets/styles/style-home";
+import styles from "../assets/styles/style-movies";
 
-class HomeScreen extends Component {
+class MoviesScreen extends Component {
   render() {
     const width = Dimensions.get("window").width;
 
-    const highlights = [
-        { id: "1", image: require("../assets/images/posters/poster_01.png") },
-        { id: "2", image: require("../assets/images/posters/poster_02.png") },
-        { id: "3", image: require("../assets/images/posters/poster_03.png") },
-        { id: "4", image: require("../assets/images/posters/poster_04.png") }
-    ];
-
-    const popularOnSeven = [
+    const mostWatched = [
         { id: "1", image: require("../assets/images/posters/poster_05.png") },
         { id: "2", image: require("../assets/images/posters/poster_06.png") },
         { id: "3", image: require("../assets/images/posters/poster_07.png") },
@@ -45,7 +38,7 @@ class HomeScreen extends Component {
         { id: "10", image: require("../assets/images/posters/poster_24.png") }
     ];
 
-    const action  = [
+    const movies  = [
         { id: "1", image: require("../assets/images/posters/poster_25.png") },
         { id: "2", image: require("../assets/images/posters/poster_26.png") },
         { id: "3", image: require("../assets/images/posters/poster_27.png") },
@@ -69,69 +62,105 @@ class HomeScreen extends Component {
 
                     <View style={ styles.body }>
 
-                        <Carousel
-                            loop
-                            style={ styles.carouselPrimary }
-                            width={ width }
-                            autoPlay={ true }
-                            data={ highlights }
-                            scrollAnimationDuration={ 1500 }
-                            renderItem={({ item }) => (
-                                <TouchableOpacity style={ styles.carouselItemPrimary }>
-                                    <Image
-                                        source={ item.image }
-                                        style={ styles.carouselImagePrimary }
-                                    />
-                                </TouchableOpacity>
-                            )}
-                        />
+                        <Text style={ styles.title }>Filmes</Text>
 
-                        <Text style={ styles.title }>Popular no Seven+</Text>
+                        <Text style={ styles.label }>Mais assistidos</Text>
                         <Carousel
                             loop
-                            style={ styles.carouselSecondary }
+                            style={ styles.carousel }
                             width={ width * 0.4 }
-                            data={ popularOnSeven }
+                            data={ mostWatched }
                             scrollAnimationDuration={ 2000 }
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={ styles.carouselItemSecondary }>
+                                <TouchableOpacity style={ styles.carouselItem }>
                                     <Image
                                         source={ item.image }
-                                        style={ styles.carouselImageSecondary }
+                                        style={ styles.carouselImage }
                                     />
                                 </TouchableOpacity>
                             )}
                         />
 
-                        <Text style={ styles.title }>Em alta</Text>
+                        <Text style={ styles.label }>Em alta</Text>
                         <Carousel
                             loop
-                            style={ styles.carouselSecondary }
+                            style={ styles.carousel }
                             width={ width * 0.4 }
                             data={ trending }
                             scrollAnimationDuration={ 2000 }
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={ styles.carouselItemSecondary }>
+                                <TouchableOpacity style={ styles.carouselItem }>
                                     <Image
                                         source={ item.image }
-                                        style={ styles.carouselImageSecondary }
+                                        style={ styles.carouselImage }
                                     />
                                 </TouchableOpacity>
                             )}
                         />
 
-                        <Text style={ styles.title }>Ação</Text>
+                        <Text style={ styles.label }>Ação</Text>
                         <Carousel
                             loop
-                            style={ styles.carouselSecondary }
+                            style={ styles.carousel }
                             width={ width * 0.4 }
-                            data={ action }
+                            data={ movies }
                             scrollAnimationDuration={ 2000 }
                             renderItem={({ item }) => (
-                                <TouchableOpacity style={ styles.carouselItemSecondary }>
+                                <TouchableOpacity style={ styles.carouselItem }>
                                     <Image
                                         source={ item.image }
-                                        style={ styles.carouselImageSecondary }
+                                        style={ styles.carouselImage }
+                                    />
+                                </TouchableOpacity>
+                            )}
+                        />
+                        
+                        <Text style={ styles.label }>Aventura</Text>
+                        <Carousel
+                            loop
+                            style={ styles.carousel }
+                            width={ width * 0.4 }
+                            data={ movies }
+                            scrollAnimationDuration={ 2000 }
+                            renderItem={({ item }) => (
+                                <TouchableOpacity style={ styles.carouselItem }>
+                                    <Image
+                                        source={ item.image }
+                                        style={ styles.carouselImage }
+                                    />
+                                </TouchableOpacity>
+                            )}
+                        />
+
+                        <Text style={ styles.label }>Comédia</Text>
+                        <Carousel
+                            loop
+                            style={ styles.carousel }
+                            width={ width * 0.4 }
+                            data={ movies }
+                            scrollAnimationDuration={ 2000 }
+                            renderItem={({ item }) => (
+                                <TouchableOpacity style={ styles.carouselItem }>
+                                    <Image
+                                        source={ item.image }
+                                        style={ styles.carouselImage }
+                                    />
+                                </TouchableOpacity>
+                            )}
+                        />
+
+                        <Text style={ styles.label }>Terror</Text>
+                        <Carousel
+                            loop
+                            style={ styles.carousel }
+                            width={ width * 0.4 }
+                            data={ movies }
+                            scrollAnimationDuration={ 2000 }
+                            renderItem={({ item }) => (
+                                <TouchableOpacity style={ styles.carouselItem }>
+                                    <Image
+                                        source={ item.image }
+                                        style={ styles.carouselImage }
                                     />
                                 </TouchableOpacity>
                             )}
@@ -150,4 +179,4 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen;
+export default MoviesScreen;

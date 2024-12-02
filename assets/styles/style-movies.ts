@@ -14,30 +14,18 @@ const styles = StyleSheet.create({
     body: {
         width: width,
         height: "100%",
-        backgroundColor: "#000",
-        paddingVertical: 20
-    },
-
-    carouselPrimary: {
-        width: width,
-        height: height / 4.2,
-        marginBottom: 10
-    },
-
-    carouselItemPrimary: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-
-    carouselImagePrimary: {
-        width: "100%",
-        height: "100%",
-        resizeMode: "contain",
-        borderRadius: 50
+        backgroundColor: "#000"
     },
 
     title: {
+        color: "#FFF",
+        fontSize: 24,
+        fontWeight: "bold",
+        marginTop: 20,
+        marginLeft: 15
+    },
+
+    label: {
         color: "#FFF",
         fontSize: 18,
         fontWeight: "bold",
@@ -45,18 +33,18 @@ const styles = StyleSheet.create({
         marginLeft: 15
     },
 
-    carouselSecondary: {
+    carousel: {
         width: width,
         height: height / 8,
     },
 
-    carouselItemSecondary: {
+    carouselItem: {
         flex: 1,
         alignItems: "center",
         justifyContent: "center"
     },
 
-    carouselImageSecondary: {
+    carouselImage: {
         width: "90%",
         height: "100%",
         resizeMode: "contain",
