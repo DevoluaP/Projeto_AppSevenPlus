@@ -9,8 +9,8 @@ Este repositório contém o projeto `Seven Plus`, um streaming desenvolvido para
 1. Clone o repositório do GitHub:
 
 ```
-git clone https://github.com/DevoluaP/projeto-seven-mobile.git
-cd projeto-seven-mobile
+git clone https://github.com/DevoluaP/Projeto_AppSevenPlus.git
+cd Projeto_AppSevenPlus
 ```
 
 2. Instale as dependências:
