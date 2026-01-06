@@ -4,8 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeScreen from "./screens/HomeScreen";
 import SearchScreen from "./screens/SearchScreen";
-// import DownloadsScreen from "./screens/DownloadsScreen";
-// import MenuScreen from "./screens/MenuScreen";
+import DownloadsScreen from "./screens/DownloadsScreen";
+import MenuScreen from "./screens/MenuScreen";
 import SeriesScreen from "./screens/SeriesScreen";
 import MoviesScreen from "./screens/MoviesScreen";
 import MyListScreen from "./screens/MyListScreen";
@@ -22,9 +22,6 @@ import NewPasswordScreen from "./screens/NewPasswordScreen";
 
 const Stack = createStackNavigator();
 
-{/* <Stack.Screen name="Downloads" component={ DownloadsScreen } options={{ headerShown: false }} /> */}
-{/* <Stack.Screen name="Menu" component={ MenuScreen } options={{ headerShown: false }} /> */}
-
 class App extends Component {
   render() {
     return (
@@ -34,6 +31,8 @@ class App extends Component {
           
           <Stack.Screen name="Home" component={ HomeScreen } options={{ headerShown: false }} />
           <Stack.Screen name="Search" component={ SearchScreen } options={{ headerShown: false }} />
+          <Stack.Screen name="Downloads" component={ DownloadsScreen } options={{ headerShown: false }} />
+          <Stack.Screen name="Menu" component={ MenuScreen } options={{ headerShown: false }} />
           <Stack.Screen name="Series" component={ SeriesScreen } options={{ headerShown: false }} />
           <Stack.Screen name="Movies" component={ MoviesScreen } options={{ headerShown: false }} />
           <Stack.Screen name="MyList" component={ MyListScreen } options={{ headerShown: false }} />
