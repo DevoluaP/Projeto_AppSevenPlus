@@ -26,29 +26,93 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-    
         <Stack.Navigator initialRouteName="Index">
-          
-          <Stack.Screen name="Home" component={ HomeScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Search" component={ SearchScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Downloads" component={ DownloadsScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Menu" component={ MenuScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Series" component={ SeriesScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Movies" component={ MoviesScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="MyList" component={ MyListScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Index" component={ IndexScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Login" component={ LoginScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="ChooseProfile" component={ ChooseProfileScreen } options={{ headerShown: false }} /> 
-          <Stack.Screen name="Plan" component={ PlanScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="Register" component={ RegisterScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="CreateProfile" component={ CreateProfileScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="EditProfile" component={ EditProfileScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="EditingProfile" component={ EditingProfileScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="RecoveryPassword" component={ RecoveryPasswordScreen } options={{ headerShown: false }} />
-          <Stack.Screen name="NewPassword" component={ NewPasswordScreen } options={{ headerShown: false }} />
-
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Search"
+            component={SearchScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Downloads"
+            component={DownloadsScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Menu"
+            component={MenuScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Series"
+            component={SeriesScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Movies"
+            component={MoviesScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MyList"
+            component={MyListScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Index"
+            component={IndexScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ChooseProfile"
+            component={ChooseProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Plan"
+            component={PlanScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={RegisterScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="CreateProfile"
+            component={CreateProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="EditProfile"
+            component={EditProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="EditingProfile"
+            component={EditingProfileScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RecoveryPassword"
+            component={RecoveryPasswordScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="NewPassword"
+            component={NewPasswordScreen}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
-
       </NavigationContainer>
     );
   }

@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { View, Image, Text, TextInput, TouchableOpacity, ImageBackground } from "react-native";
+import {
+  View,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ImageBackground,
+  StatusBar,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
@@ -7,69 +15,60 @@ import styles from "../assets/styles/style-login";
 
 class LoginScreen extends Component {
   render() {
-    return(
+    return (
       <SafeAreaView>
-
+        <StatusBar barStyle="light-content" backgroundColor="#000" />
         <ImageBackground
-          source={ require("../assets/images/background.png") }
-          style={ styles.background }
+          source={require("../assets/images/background.png")}
+          style={styles.background}
         >
-
-          <View style={ styles.container }>
-
-            <View style={ styles.header }>
-
+          <View style={styles.container}>
+            <View style={styles.header}>
               <TouchableOpacity
-                style={ styles.back }
-                onPress={ () => this.props.navigation.navigate("Home") }
+                style={styles.back}
+                onPress={() => this.props.navigation.navigate("Index")}
               >
-                <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
+                <FontAwesome name="arrow-left" size={30} color="#FFF" />
               </TouchableOpacity>
 
               <Image
-                source={ require("../assets/images/logo.png") }
-                style={ styles.logo }
+                source={require("../assets/images/logo.png")}
+                style={styles.logo}
               />
-
             </View>
 
-            <View style={ styles.body }>
+            <View style={styles.body}>
+              <Text style={styles.title}>Login</Text>
 
-              <Text style={ styles.title }>Login</Text>
+              <Text style={styles.label}>E-mail</Text>
+              <TextInput style={styles.input} />
 
-              <Text style={ styles.label }>E-mail</Text>
-              <TextInput style={ styles.input } />
-
-              <Text style={ styles.label }>Senha</Text>
-              <TextInput style={ styles.input } />
+              <Text style={styles.label}>Senha</Text>
+              <TextInput style={styles.input} />
 
               <TouchableOpacity
-                style={ styles.button }
-                onPress={ () => this.props.navigation.navigate("ChooseProfile") }
+                style={styles.button}
+                onPress={() => this.props.navigation.navigate("ChooseProfile")}
               >
-                <Text style={ styles.buttonText }>Entrar</Text>
+                <Text style={styles.buttonText}>Entrar</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
-                onPress={ () => this.props.navigation.navigate("RecoveryPassword") }
+                onPress={() =>
+                  this.props.navigation.navigate("RecoveryPassword")
+                }
               >
-                <Text style={ styles.text }>Esqueceu a senha?</Text>
+                <Text style={styles.text}>Esqueceu a senha?</Text>
               </TouchableOpacity>
-
             </View>
 
-            <View style={ styles.footer }>
-
-              <Text style={ styles.footerText }>
+            <View style={styles.footer}>
+              <Text style={styles.footerText}>
                 © 2024 Seven Plus. Todos os direitos reservados.
               </Text>
-
             </View>
-
           </View>
-
         </ImageBackground>
-
       </SafeAreaView>
     );
   }

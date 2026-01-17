@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, StatusBar } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -9,68 +9,64 @@ import styles from "../assets/styles/style-editing-profile";
 class EditingProfileScreen extends Component {
   state = {
     profileImage: null,
-  }
-    
+  };
+
   chooseImage = () => {
     const options = {
       mediaType: "photo",
       includeBase64: true,
-    }
-    
+    };
+
     launchImageLibrary(options, (response) => {
       if (!response.didCancel && !response.errorCode) {
         const { uri } = response.assets[0];
         this.setState({ profileImage: uri });
       }
     });
-  }
+  };
 
   render() {
-    return(
+    return (
       <SafeAreaView>
+        <StatusBar barStyle="light-content" backgroundColor="#11111E" />
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <TouchableOpacity
+              style={styles.back}
+              onPress={() => this.props.navigation.goBack()}
+            >
+              <FontAwesome name="arrow-left" size={30} color="#FFF" />
+            </TouchableOpacity>
 
-      <View style={ styles.container }>
+            <Text style={styles.title}>Editar perfil</Text>
+          </View>
 
-        <View style={ styles.header }>
-
-          <TouchableOpacity
-            style={ styles.back } 
-            onPress={ () => this.props.navigation.goBack() }
-          >
-            <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
-          </TouchableOpacity>
-
-          <Text style={ styles.title }>Editar perfil</Text>
-
-        </View>
-
-        <View style={ styles.body }>
-
-          <TouchableOpacity style={ styles.imagePicker } onPress={ this.chooseImage }>
-            {this.state.profileImage ? (
-              <Image
+          <View style={styles.body}>
+            <TouchableOpacity
+              style={styles.imagePicker}
+              onPress={this.chooseImage}
+            >
+              {this.state.profileImage ? (
+                <Image
                   source={{ uri: this.state.profileImage }}
-                  style={ styles.profileImage }
-              />
-            ) : (
-              <FontAwesome name="camera" size={ 50 } color="#FFF" />
-            )}
-          </TouchableOpacity>
+                  style={styles.profileImage}
+                />
+              ) : (
+                <FontAwesome name="camera" size={50} color="#FFF" />
+              )}
+            </TouchableOpacity>
 
-          <Text style={ styles.label }>Nome do perfil</Text>
-          <TextInput style={ styles.input } />
+            <Text style={styles.label}>Nome do perfil</Text>
+            <TextInput style={styles.input} />
 
-          <TouchableOpacity
-            style={ styles.button }
-            onPress={ () => this.props.navigation.navigate("EditProfile") }
-          >
-            <Text style={ styles.buttonText }>Pronto</Text>
-          </TouchableOpacity>
-
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate("EditProfile")}
+            >
+              <Text style={styles.buttonText}>Pronto</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-
-      </View>
-
       </SafeAreaView>
     );
   }

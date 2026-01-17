@@ -7,58 +7,44 @@ import styles from "./style-footer";
 
 class Footer extends Component {
   render() {
-    return(
-        <SafeAreaView>
+    return (
+      <SafeAreaView>
+        <View style={styles.footer}>
+          <View style={styles.footerMenu}>
+            <TouchableOpacity
+              style={styles.iconContainer}
+              onPress={() => this.props.navigation.navigate("Home")}
+            >
+              <MaterialIcons name="home" size={24} color="#FFF" />
+              <Text style={styles.iconText}>Home</Text>
+            </TouchableOpacity>
 
-            <View style={ styles.footer }>
+            <TouchableOpacity
+              style={styles.iconContainer}
+              onPress={() => this.props.navigation.navigate("Search")}
+            >
+              <MaterialIcons name="search" size={24} color="#FFF" />
+              <Text style={styles.iconText}>Buscar</Text>
+            </TouchableOpacity>
 
-                <View style={ styles.footerMenu }>
+            <TouchableOpacity
+              style={styles.iconContainer}
+              onPress={() => this.props.navigation.navigate("Downloads")}
+            >
+              <MaterialIcons name="download" size={24} color="#FFF" />
+              <Text style={styles.iconText}>Downloads</Text>
+            </TouchableOpacity>
 
-                    <TouchableOpacity
-                        style={ styles.iconContainer }
-                        onPress={ () => this.props.navigation.navigate("Home") }
-                    >
-
-                        <MaterialIcons name="home" size={ 24 } color="#FFF" />
-                        <Text style={ styles.iconText }>Home</Text>
-
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={ styles.iconContainer }
-                        onPress={ () => this.props.navigation.navigate("Search") }
-                    >
-
-                        <MaterialIcons name="search" size={ 24 } color="#FFF" />
-                        <Text style={ styles.iconText }>Buscar</Text>
-
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={ styles.iconContainer }
-                        onPress={ () => this.props.navigation.navigate("Downloads") }
-                    >
-
-                        <MaterialIcons name="download" size={ 24 } color="#FFF" />
-                        <Text style={ styles.iconText }>Downloads</Text>
-
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={ styles.iconContainer }
-                        onPress={ () => this.props.navigation.navigate("Menu") }
-                    >
-
-                        <MaterialIcons name="menu" size={ 24 } color="#FFF" />
-                        <Text style={ styles.iconText }>Menu</Text>
-
-                    </TouchableOpacity>
-
-                </View>
-
-            </View>
-
-        </SafeAreaView>
+            <TouchableOpacity
+              style={styles.iconContainer}
+              onPress={() => this.props.navigation.navigate("Menu")}
+            >
+              <MaterialIcons name="menu" size={24} color="#FFF" />
+              <Text style={styles.iconText}>Menu</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </SafeAreaView>
     );
   }
 }

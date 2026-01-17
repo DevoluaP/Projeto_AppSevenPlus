@@ -1,45 +1,33 @@
-import { Dimensions, StyleSheet } from "react-native";
-
-const { width } = Dimensions.get("window");
-
+import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
-    container: {
-        width: width,
-        height: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#11111E"
-    },
-
-    body: {
-        width: width,
-        height: "100%",
-        backgroundColor: "#000"
-    },
-
-    title: {
-        color: "#FFF",
-        fontSize: 24,
-        fontWeight: "bold",
-        marginTop: 20,
-        marginBottom: 14,
-        marginLeft: 15
-    },
-
-    list: {
-        width: width * 0.68,
-        height: "100%",
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-
-    listItem: {
-        width: width * 0.6,
-        height: 150,
-        resizeMode: "contain",
-        borderRadius: 20
-    }
+  container: {
+    flex: 1,
+    backgroundColor: "#11111E",
+  },
+  body: {
+    width: "100%",
+    backgroundColor: "#000",
+  },
+  title: {
+    color: "#FFF",
+    fontSize: 24,
+    fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 14,
+    marginLeft: 30,
+  },
+  list: {
+    width: "100%",
+    alignItems: "center",
+    paddingBottom: 30,
+  },
+  listItem: {
+    width: "90%",
+    aspectRatio: 16 / 9,
+    resizeMode: "contain",
+    borderRadius: 16,
+    marginBottom: 16,
+  },
 });
 
 export default styles;

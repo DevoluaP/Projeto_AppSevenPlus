@@ -1,6 +1,6 @@
 # Seven Plus
 
-Este repositório contém o projeto `Seven Plus`, um streaming desenvolvido para fins educacionais.
+Este repositório contém o projeto `Seven Plus`, uma plataforma de streaming de vídeo desenvolvida com foco em performance, usabilidade e experiência do usuário.
 
 ## Configuração Inicial
 
@@ -10,56 +10,33 @@ Este repositório contém o projeto `Seven Plus`, um streaming desenvolvido para
 
 ```
 git clone https://github.com/DevoluaP/Projeto_AppSevenPlus.git
-cd Projeto_AppSevenPlus
 ```
 
 2. Instale as dependências:
 
-Instalar react-native-gesture-handler:
 ```
-npm install react-native-gesture-handler
-```
-Ou com Yarn:
-```
-yarn add react-native-gesture-handler
+cd Projeto_AppSevenPlus
 ```
 
-Instalar react-native-vector-icons:
 ```
-npm install react-native-vector-icons
-```
-Ou com Yarn:
-```
-yarn add react-native-vector-icons
+npm install
 ```
 
-Instalar react-native-image-picker:
-```
-npm install react-native-image-picker
-```
 Ou com Yarn:
-```
-yarn add react-native-image-picker
-```
 
-Instalar react-native-reanimated-carousel:
 ```
-npm install react-native-reanimated-carousel
-```
-Ou com Yarn:
-```
-yarn add react-native-reanimated-carousel
+yarn install
 ```
 
 ## Script Disponíveis
 
 Após a instalação, você pode iniciar com os seguintes comandos:
 
-* `npm start`: Inicia o aplicativo em modo de desenvolvimento.
+- `npm start`: Inicia o aplicativo em modo de desenvolvimento.
 
-* `npx react-native run-android`: Para Android
+- `npx react-native run-android`: Para Android
 
-* `npx react-native run-ios`: Para iOS
+- `npx react-native run-ios`: Para iOS
 
 ## Contribuindo
 

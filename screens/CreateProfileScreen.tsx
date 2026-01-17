@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, StatusBar } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -9,68 +9,64 @@ import styles from "../assets/styles/style-create-profile";
 class CreateProfileScreen extends Component {
   state = {
     profileImage: null,
-  }
-    
+  };
+
   chooseImage = () => {
     const options = {
       mediaType: "photo",
       includeBase64: true,
-    }
-    
+    };
+
     launchImageLibrary(options, (response) => {
       if (!response.didCancel && !response.errorCode) {
         const { uri } = response.assets[0];
         this.setState({ profileImage: uri });
       }
     });
-  }
+  };
 
   render() {
-    return(
+    return (
       <SafeAreaView>
-
-        <View style={ styles.container }>
-      
-          <View style={ styles.header }>
-      
+        <StatusBar barStyle="light-content" backgroundColor="#11111E" />
+        <View style={styles.container}>
+          <View style={styles.header}>
             <TouchableOpacity
-              style={ styles.back } 
-              onPress={ () => this.props.navigation.goBack() }
+              style={styles.back}
+              onPress={() => this.props.navigation.goBack()}
             >
-              <FontAwesome name="arrow-left" size={ 30 } color="#FFF" />
+              <FontAwesome name="arrow-left" size={30} color="#FFF" />
             </TouchableOpacity>
-      
-            <Text style={ styles.title }>Criar perfil</Text>
-      
+
+            <Text style={styles.title}>Criar perfil</Text>
           </View>
-      
-          <View style={ styles.body }>
-      
-            <TouchableOpacity style={ styles.imagePicker } onPress={ this.chooseImage }>
+
+          <View style={styles.body}>
+            <TouchableOpacity
+              style={styles.imagePicker}
+              onPress={this.chooseImage}
+            >
               {this.state.profileImage ? (
                 <Image
-                    source={{ uri: this.state.profileImage }}
-                    style={ styles.profileImage }
+                  source={{ uri: this.state.profileImage }}
+                  style={styles.profileImage}
                 />
               ) : (
-                <FontAwesome name="camera" size={ 50 } color="#FFF" />
+                <FontAwesome name="camera" size={50} color="#FFF" />
               )}
             </TouchableOpacity>
-            
-            <Text style={ styles.label }>Nome do perfil</Text>
-            <TextInput style={ styles.input } />
-            
-            <TouchableOpacity
-              style={ styles.button }
-              onPress={ () => this.props.navigation.navigate("ChooseProfile") }
-            >
-              <Text style={ styles.buttonText }>Pronto</Text>
-            </TouchableOpacity>
-            
-          </View>
-            
-        </View>
 
+            <Text style={styles.label}>Nome do perfil</Text>
+            <TextInput style={styles.input} />
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate("EditProfile")}
+            >
+              <Text style={styles.buttonText}>Pronto</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </SafeAreaView>
     );
   }

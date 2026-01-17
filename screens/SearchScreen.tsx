@@ -8,40 +8,30 @@ import Footer from "../components/Footer";
 import styles from "../assets/styles/style-search";
 
 class SearchScreen extends Component {
-    render() {
-        return(
-            <SafeAreaView>
+  render() {
+    return (
+      <SafeAreaView>
+        <View style={styles.container}>
+          <View>
+            <TextInput
+              style={styles.input}
+              placeholder="Buscar"
+              placeholderTextColor="#999"
+            />
+            <FontAwesome name="search" size={20} style={styles.searchIcon} />
+          </View>
 
-                <View style={ styles.container }>
+          <ScrollView>
+            <View style={styles.body}>
+              <View></View>
+            </View>
+          </ScrollView>
 
-                    <View>
-
-                        <TextInput
-                            style={ styles.input }
-                            placeholder="Buscar"
-                            placeholderTextColor="#999"
-                        />
-                        <FontAwesome name="search" size={ 20 } style={ styles.searchIcon } />
-
-                    </View>
-
-                    <ScrollView>
-
-                        <View style={ styles.body }>
-
-                            <View></View>
-
-                        </View>
-
-                    </ScrollView>
-
-                    <Footer navigation={ this.props.navigation } />
-
-                </View>
-
-            </SafeAreaView>
-        );
-    }
+          <Footer navigation={this.props.navigation} />
+        </View>
+      </SafeAreaView>
+    );
+  }
 }
 
 export default SearchScreen;
